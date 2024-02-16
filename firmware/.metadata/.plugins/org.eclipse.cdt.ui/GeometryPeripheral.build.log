@@ -1,0 +1,17 @@
+01:34:12 **** Incremental Build of configuration Debug for project GeometryPeripheral ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/GeometryPeripheral/UARTFrame/Inc" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/GeometryPeripheral/NTBusSlave/Inc" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/GeometryPeripheral/NTBusDataModel/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "GeometryPeripheral.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Acer\Project\Air-quality-monitoring-station\firmware\GeometryPeripheral\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GeometryPeripheral.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GeometryPeripheral.elf
+ 
+arm-none-eabi-size   GeometryPeripheral.elf 
+arm-none-eabi-objdump -h -S  GeometryPeripheral.elf  > "GeometryPeripheral.list"
+   text	   data	    bss	    dec	    hex	filename
+   9156	    152	   3016	  12324	   3024	GeometryPeripheral.elf
+Finished building: default.size.stdout
+ 
+Finished building: GeometryPeripheral.list
+ 
+
+01:34:13 Build Finished. 0 errors, 0 warnings. (took 1s.67ms)
+

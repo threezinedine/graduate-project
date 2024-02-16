@@ -1,0 +1,54 @@
+﻿@page "/profile"
+@using BlazorStrap
+@using Microsoft.AspNetCore.Authorization
+@using QualityStation.Shared.Pages.ViewModels
+@using System.Security.Claims
+
+@attribute [Authorize]
+
+@inject AuthenticationStateProvider m_pAuthStateProvider
+@inject ProfilePageViewModel m_vmProfilePageViewModel
+@inject IBlazorStrap m_oBlazorStrap;
+
+<PageTitle>Profile - </PageTitle>
+
+<BSContainer>
+    <BSRow Class="mt-4">
+        <BSCol Class="col-md-6">
+            <BSContainer>
+                <div class="mb-3">
+                    <BSLabel>Username</BSLabel>
+                    <BSInput InputType="InputType.Text" 
+                                IsDisabled="true" 
+                                Value="@m_vmProfilePageViewModel.Username"/>
+                </div>
+
+                <div class="mb-3">
+                    <BSLabel>Email</BSLabel>
+                    <BSInput InputType="InputType.Text" 
+                                @bind-Value="@m_vmProfilePageViewModel.Email"/>
+                </div>
+                <BSButton OnClick="OnClicked_UpdateProfile" Color="BSColor.Primary">Update Profile</BSButton>
+            </BSContainer>
+        </BSCol>
+    </BSRow>
+</BSContainer>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await m_vmProfilePageViewModel.LoadAuthenticatedUser();
+    }
+
+    protected async void OnClicked_UpdateProfile()
+    {
+        await m_vmProfilePageViewModel.UpdateUserProfile();
+        m_oBlazorStrap.Toaster.Add("Updated", "Update profile succesfully", options =>
+        {
+            options.CloseAfter = 1000;
+            options.Color = BSColor.Success;
+            options.HasIcon = true;
+            options.Toast = Toast.TopRight;
+        });
+    }
+}

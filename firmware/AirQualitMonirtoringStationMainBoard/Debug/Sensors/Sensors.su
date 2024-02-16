@@ -1,0 +1,13 @@
+../Sensors/Sensors.c:11:13:NodeFreeElement	16	static
+../Sensors/Sensors.c:16:6:Sensors_Init	8	static
+../Sensors/Sensors.c:22:6:Sensors_Release	8	static
+../Sensors/Sensors.c:27:6:Sensors_AddSensors	32	static
+../Sensors/Sensors.c:36:6:Sensors_Remove	16	static
+../Sensors/Sensors.c:41:9:Sensors_Length	8	static
+../Sensors/Sensors.c:46:6:Sensors_ForEach	24	static
+../Sensors/Sensors.c:55:6:Sensors_Serialize	32	static
+../Sensors/Sensors.c:70:6:Sensors_Clear	8	static
+../Sensors/Sensors.c:76:6:Sensors_DeSerialize	32	static
+../Sensors/Sensors.c:90:9:Sensors_GetSensor	16	static
+../Sensors/Sensors.c:95:6:Sensors_ToString	32	static
+../Sensors/Sensors.c:101:10:Sensors_GetData	32	static

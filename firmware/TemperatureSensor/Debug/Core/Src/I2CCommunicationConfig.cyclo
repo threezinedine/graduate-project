@@ -1,0 +1,2 @@
+../Core/Src/I2CCommunicationConfig.c:23:6:I2C_TransmitFunction	1
+../Core/Src/I2CCommunicationConfig.c:31:6:I2C_HandlerFunction	10

@@ -1,0 +1,10 @@
+../SX1278/sx1278.c:13:9:lora_read_reg	24	static
+../SX1278/sx1278.c:26:6:lora_write_reg	24	static
+../SX1278/sx1278.c:36:9:lora_init	24	static
+../SX1278/sx1278.c:62:5:lora_prasePacket	24	static
+../SX1278/sx1278.c:86:9:lora_available	16	static
+../SX1278/sx1278.c:90:9:lora_read	16	static
+../SX1278/sx1278.c:97:9:lora_begin_packet	16	static
+../SX1278/sx1278.c:109:6:lora_tx	32	static
+../SX1278/sx1278.c:121:9:lora_end_packet	24	static
+../SX1278/sx1278.c:134:6:lora_set_frequency	32	static

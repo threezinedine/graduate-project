@@ -1,0 +1,40 @@
+body[b-4yhhx6x9dz] {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0f0f0f;
+    color: #00ff00;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.code-line[b-4yhhx6x9dz] {
+    display: flex;
+    align-items: baseline;
+}
+
+.code-area[b-4yhhx6x9dz] {
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    padding: 10px;
+    width: 600px;
+    height: 400px;
+    overflow: auto;
+    background-color: #000;
+}
+
+.code-prompt[b-4yhhx6x9dz] {
+    color: #00ff00;
+    padding-left: 2px;
+}
+
+.code-input[b-4yhhx6x9dz] {
+    color: #00ff00;
+    border: none;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-size: inherit;
+}
+

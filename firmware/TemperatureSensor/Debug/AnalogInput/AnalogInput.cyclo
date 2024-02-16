@@ -1,0 +1,15 @@
+../AnalogInput/AnalogInput.c:219:7:AnalogInput_DefaultHandler	1
+../AnalogInput/AnalogInput.c:195:6:NodeFreeElement	1
+../AnalogInput/AnalogInput.c:21:6:AnalogInput_Init	2
+../AnalogInput/AnalogInput.c:42:6:AnalogInput_Release	1
+../AnalogInput/AnalogInput.c:49:9:AnalogInput_GetDataLength	4
+../AnalogInput/AnalogInput.c:64:6:AnalogInput_SetType	3
+../AnalogInput/AnalogInput.c:72:6:AnalogInput_TurnOff	1
+../AnalogInput/AnalogInput.c:78:6:AnalogInput_TurnOn	1
+../AnalogInput/AnalogInput.c:84:6:AnalogInput_SetMinAndMax	1
+../AnalogInput/AnalogInput.c:91:6:AnalogInput_SetInputMax	1
+../AnalogInput/AnalogInput.c:97:6:AnalogInput_SetHandler	1
+../AnalogInput/AnalogInput.c:103:6:AnalogInput_Update	9
+../AnalogInput/AnalogInput.c:141:6:AnalogInput_GetData	1
+../AnalogInput/AnalogInput.c:146:6:AnalogInput_GetStatusString	11
+../AnalogInput/AnalogInput.c:178:9:AnalogInput_TypeFromString	7

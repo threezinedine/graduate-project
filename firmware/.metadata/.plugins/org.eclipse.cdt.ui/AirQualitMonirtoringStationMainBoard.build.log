@@ -1,0 +1,17 @@
+22:11:03 **** Incremental Build of configuration Debug for project AirQualitMonirtoringStationMainBoard ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/MainProcess.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/AirQualitMonirtoringStationMainBoard/Queue/include" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/AirQualitMonirtoringStationMainBoard/HashMap/include" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/AirQualitMonirtoringStationMainBoard/Command/include" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/AirQualitMonirtoringStationMainBoard/StringUtils/include" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/AirQualitMonirtoringStationMainBoard/LCD/include" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/AirQualitMonirtoringStationMainBoard/Communication/include" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/AirQualitMonirtoringStationMainBoard/LinkList/include" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/AirQualitMonirtoringStationMainBoard/Sensors/include" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/AirQualitMonirtoringStationMainBoard/LoRa/Inc" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/AirQualitMonirtoringStationMainBoard/SX1278" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/MainProcess.d" -MT"Core/Src/MainProcess.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/MainProcess.o"
+arm-none-eabi-gcc -o "AirQualitMonirtoringStationMainBoard.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Acer\Project\Air-quality-monitoring-station\firmware\AirQualitMonirtoringStationMainBoard\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="AirQualitMonirtoringStationMainBoard.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: AirQualitMonirtoringStationMainBoard.elf
+ 
+arm-none-eabi-size   AirQualitMonirtoringStationMainBoard.elf 
+arm-none-eabi-objdump -h -S  AirQualitMonirtoringStationMainBoard.elf  > "AirQualitMonirtoringStationMainBoard.list"
+   text	   data	    bss	    dec	    hex	filename
+  55628	    560	   6832	  63020	   f62c	AirQualitMonirtoringStationMainBoard.elf
+Finished building: default.size.stdout
+ 
+Finished building: AirQualitMonirtoringStationMainBoard.list
+ 
+
+22:11:04 Build Finished. 0 errors, 0 warnings. (took 1s.114ms)
+

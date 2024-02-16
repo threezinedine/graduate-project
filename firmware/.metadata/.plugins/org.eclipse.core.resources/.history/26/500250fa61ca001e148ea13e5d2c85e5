@@ -1,0 +1,18 @@
+/*
+ * AnalogInputHandlers.h
+ *
+ *  Created on: Feb 13, 2024
+ *      Author: Acer
+ */
+
+#ifndef INC_ANALOGINPUTHANDLERS_H_
+#define INC_ANALOGINPUTHANDLERS_H_
+
+#include "AnalogInput.h"
+
+float AD1_Handler(AnalogInput_Instance *sIns);
+float AD2_Handler(AnalogInput_Instance *sIns);
+float AD3_Handler(AnalogInput_Instance *sIns);
+float AD4_Handler(AnalogInput_Instance *sIns);
+
+#endif /* INC_ANALOGINPUTHANDLERS_H_ */

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TemperatureSensor/AnalogInput/AnalogInput.cpp&apos; to &apos;AnalogInput.c&apos;" description="Rename resource &apos;AnalogInput.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="AnalogInput/AnalogInput.cpp" name="AnalogInput.c" stamp="1707755025641" updateReferences="true"/>
+</session>

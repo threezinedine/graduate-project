@@ -1,0 +1,7 @@
+../HashMap/HashMap.c:8:13:DefaultFreeElementCallback	0	static
+../HashMap/HashMap.c:12:10:HashMap_Init	8	static
+../HashMap/HashMap.c:21:6:HashMap_Set	24	static
+../HashMap/HashMap.c:52:7:HashMap_Get	16	static
+../HashMap/HashMap.c:71:6:HashMap_Release	16	static
+../HashMap/HashMap.c:86:9:HashMap_Contains	16	static
+../HashMap/HashMap.c:103:6:HashMap_SetFreeElementCallback	0	static

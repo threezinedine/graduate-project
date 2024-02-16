@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;TemperatureSensor/AddressExtractor/AddressExtractor&apos; to &apos;AddressExtractor.h&apos;" description="Rename resource &apos;AddressExtractor&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="AddressExtractor/AddressExtractor" name="AddressExtractor.h" stamp="1705321435584" updateReferences="true"/>
+</session>

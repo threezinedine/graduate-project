@@ -1,0 +1,2 @@
+../TimeTrigger/TimeTrigger.c:13:6:TimeTrigger_Reset	8	static
+../TimeTrigger/TimeTrigger.c:18:9:TimeTrigger_IsTrigger	8	static

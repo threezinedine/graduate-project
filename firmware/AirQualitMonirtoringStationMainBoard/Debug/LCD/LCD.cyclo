@@ -1,0 +1,13 @@
+../LCD/LCD.c:11:6:LCD_Init	2
+../LCD/LCD.c:24:6:LCD_SetSendI2CData	2
+../LCD/LCD.c:31:6:LCD_Release	1
+../LCD/LCD.c:36:6:EmptyTransmitFunction	1
+../LCD/LCD.c:40:6:LCD_SetAddress	2
+../LCD/LCD.c:46:9:LCD_GetAddress	2
+../LCD/LCD.c:52:6:LCD_SendCommand	2
+../LCD/LCD.c:67:6:LCD_SendData	2
+../LCD/LCD.c:82:6:LCD_SendString	2
+../LCD/LCD.c:90:6:LCD_SetCursor	4
+../LCD/LCD.c:107:6:LCD_Clear	3
+../LCD/LCD.c:119:6:LCD_GlobalOn	1
+../LCD/LCD.c:124:6:LCD_GlobalOff	1

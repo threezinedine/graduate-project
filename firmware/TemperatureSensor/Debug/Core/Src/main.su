@@ -1,0 +1,7 @@
+../Core/Src/main.c:78:6:ADC_Select	24	static,ignoring_inline_asm
+../Core/Src/main.c:90:7:AD1_Handler	16	static
+../Core/Src/main.c:100:7:AD2_Handler	16	static
+../Core/Src/main.c:122:7:AD4_Handler	16	static
+../Core/Src/main.c:237:6:SystemClock_Config	88	static,ignoring_inline_asm
+../Core/Src/main.c:143:5:main	64	static,ignoring_inline_asm
+../Core/Src/main.c:495:6:Error_Handler	0	static,ignoring_inline_asm

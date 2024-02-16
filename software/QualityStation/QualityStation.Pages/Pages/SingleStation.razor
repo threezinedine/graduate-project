@@ -1,0 +1,164 @@
+﻿@page "/single-station/{strStationId}"
+@using QualityStation.Shared.ModelDto.AirQualityRecordDto
+@using QualityStation.Shared.Pages.Components
+@using QualityStation.Shared.Pages.ViewModels
+@using System.Dynamic
+
+@inject SingleStationPageViewModel m_vmSingleStationPageViewModel
+@inject IBlazorStrap m_blazorStrap;
+
+<PageTitle>@m_vmSingleStationPageViewModel.Station.StationName</PageTitle>
+
+<BSContainer>
+	<BSRow>
+		<BSCol ColumnSmall="12" ColumnMedium="6" ColumnLarge="6">
+			<BSContainer>
+				<BSRow>
+					<h1>Station</h1>
+				</BSRow>
+				<BSRow MarginTop="Margins.Medium">
+					<BSCol Column="12">
+						<BSRow MarginBottom="Margins.Medium">
+							<BSLabel IsColumn="true">Name</BSLabel>
+							<BSCol ColumnSmall="10">
+								<BSInput InputType="InputType.Text"
+										 @bind-Value="@m_vmSingleStationPageViewModel.Station.StationName" />
+							</BSCol>
+						</BSRow>
+						<BSRow>
+							<BSCol ColumnSmall="12" ColumnMedium="6" ColumnLarge="6">
+								<BSButton Color="BSColor.Secondary" OnClick="ReloadStation">Cancel</BSButton>
+							</BSCol>
+							<BSCol ColumnSmall="12" ColumnMedium="6" ColumnLarge="6">
+								<BSButton Color="BSColor.Primary" OnClick="UpdateStation">Update</BSButton>
+							</BSCol>
+						</BSRow>
+					</BSCol>
+				</BSRow>
+			</BSContainer>
+			<BSContainer MarginTop="Margins.Large">
+				<BSRow>
+					<BSCol>
+						<h1>Attributes</h1>
+					</BSCol>
+					<BSCol>
+						<BSButton Color="BSColor.Success" IsOutlined="true">New</BSButton>
+					</BSCol>
+				</BSRow>
+				@for (int i= 0; i< m_vmSingleStationPageViewModel.Station.Attributes.Count; i++)
+				{
+					var attr = m_vmSingleStationPageViewModel.Station.Attributes[i];
+					var count = m_vmSingleStationPageViewModel.Station.Attributes.Count;
+
+					if (count == 1)
+					{
+						<AttributeComponent StationId="@attr.StationId"
+											UpdateAttributeSuccessCallback="ReloadStation"
+						AttributeName="@attr.AttributeName" />
+					}
+					else if (attr.AttributeIndex == 0 && count > 1)
+					{
+						<AttributeComponent StationId="@attr.StationId"
+											UpdateAttributeSuccessCallback="ReloadStation"
+											NextAttributeName="@m_vmSingleStationPageViewModel.Station.Attributes[i+1].AttributeName"
+						AttributeName="@attr.AttributeName" />
+					}
+					else if (attr.AttributeIndex > 0 && attr.AttributeIndex < count - 1)
+					{
+						<AttributeComponent StationId="@attr.StationId"
+											UpdateAttributeSuccessCallback="ReloadStation"
+											PrevAttributeName="@m_vmSingleStationPageViewModel.Station.Attributes[i-1].AttributeName"
+											NextAttributeName="@m_vmSingleStationPageViewModel.Station.Attributes[i+1].AttributeName"
+						AttributeName="@attr.AttributeName" />
+					}
+					else
+					{
+						<AttributeComponent StationId="@attr.StationId"
+											UpdateAttributeSuccessCallback="ReloadStation"
+											PrevAttributeName="@m_vmSingleStationPageViewModel.Station.Attributes[i-1].AttributeName"
+						AttributeName="@attr.AttributeName" />
+					}
+				}
+			</BSContainer>
+		</BSCol>
+		<BSCol ColumnSmall="12" ColumnMedium="6" ColumnLarge="6">
+			<BSTable MarginTop="Margins.Medium">
+				<BSCaption>Records</BSCaption>
+				<BSTHead>
+					@foreach (string key in m_vmSingleStationPageViewModel.RecordKeys)
+					{
+						<BSTD>
+							@if (key != "Created")
+							{
+								<BSLink href="@($"single-station/{strStationId}/{key}")">
+									@key
+								</BSLink>
+							}
+							else
+							{
+								@key
+							}
+						</BSTD>
+					}
+				</BSTHead>
+				<BSTBody>
+					@foreach (var record in m_vmSingleStationPageViewModel.Records)
+					{
+						<BSTR>
+							@foreach (string key in m_vmSingleStationPageViewModel.RecordKeys)
+							{
+								<BSTD>@record[key]</BSTD>
+							}
+						</BSTR>
+					}
+				</BSTBody>
+			</BSTable>
+		</BSCol>
+	</BSRow>
+</BSContainer>
+
+
+@code {
+	[Parameter]
+	public string strStationId { get; set; } = string.Empty;
+
+	private Timer m_Timer;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var strErrorMessage = await m_vmSingleStationPageViewModel.LoadStationById(strStationId);
+
+        if (strErrorMessage != null)
+        {
+            m_blazorStrap.Toaster.Add("Get Station Info", strErrorMessage, options =>
+            {
+                options.CloseAfter = 3000;
+                options.Color = BSColor.Danger;
+                options.HasIcon = true;
+                options.Toast = Toast.TopRight;
+            });
+        }
+
+        m_Timer = new Timer(async (state) =>
+        {
+            await m_vmSingleStationPageViewModel.LoadRecordsById((string)state);
+            StateHasChanged();
+        }, strStationId, 0, 10000);
+    }
+
+	private async void UpdateStation()
+	{
+
+	}
+
+	private async Task ReloadStation()
+	{
+		await m_vmSingleStationPageViewModel.LoadStationById(strStationId);
+		StateHasChanged();
+	}
+
+	public void Dispose()
+	{
+		m_Timer.Dispose();
+	}	
+}

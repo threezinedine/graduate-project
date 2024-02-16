@@ -1,0 +1,11 @@
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Shared\bin\Debug\net7.0\QualityStation.Shared.deps.json
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Shared\bin\Debug\net7.0\QualityStation.Shared.dll
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Shared\bin\Debug\net7.0\QualityStation.Shared.pdb
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Shared\obj\Debug\net7.0\QualityStation.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Shared\obj\Debug\net7.0\QualityStation.Shared.AssemblyInfoInputs.cache
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Shared\obj\Debug\net7.0\QualityStation.Shared.AssemblyInfo.cs
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Shared\obj\Debug\net7.0\QualityStation.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Shared\obj\Debug\net7.0\QualityStation.Shared.dll
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Shared\obj\Debug\net7.0\refint\QualityStation.Shared.dll
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Shared\obj\Debug\net7.0\QualityStation.Shared.pdb
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Shared\obj\Debug\net7.0\ref\QualityStation.Shared.dll

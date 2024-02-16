@@ -1,0 +1,4 @@
+../AddressExtractor/AddreessExtractor.c:21:6:I2CAddres_SetFirstBit	0	static
+../AddressExtractor/AddreessExtractor.c:27:6:I2CAddres_SetSecondBit	0	static
+../AddressExtractor/AddreessExtractor.c:33:6:I2CAddres_SetThirdBit	0	static
+../AddressExtractor/AddreessExtractor.c:39:10:I2CAddress_GetAddress	16	static

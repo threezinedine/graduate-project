@@ -1,0 +1,7 @@
+../Core/Src/CommandConfig.c:32:6:Command_DefaultResponse	16	static
+../Core/Src/CommandConfig.c:37:6:Command_LCDCommandResponse	88	static
+../Core/Src/CommandConfig.c:92:6:Command_I2CCommandResponse	136	static
+../Core/Src/CommandConfig.c:308:6:Command_SensorsCommandResponse	304	static
+../Core/Src/CommandConfig.c:413:6:Command_LoRaCommandResponse	64	static
+../Core/Src/CommandConfig.c:446:6:Command_SPICommandResponse	56	static
+../Core/Src/CommandConfig.c:528:6:Command_MainCommandResponse	56	static

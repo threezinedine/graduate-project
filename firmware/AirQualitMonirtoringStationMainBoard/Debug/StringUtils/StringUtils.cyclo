@@ -1,0 +1,6 @@
+../StringUtils/StringUtils.c:9:8:SplitString	3
+../StringUtils/StringUtils.c:37:6:Free2DArray	2
+../StringUtils/StringUtils.c:47:6:FormatString	1
+../StringUtils/StringUtils.c:57:9:CompareStr	2
+../StringUtils/StringUtils.c:69:9:ConvertHexStringToHex	1
+../StringUtils/StringUtils.c:74:6:ConvertHexToString	1

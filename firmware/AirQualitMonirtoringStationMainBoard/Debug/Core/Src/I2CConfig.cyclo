@@ -1,0 +1,2 @@
+../Core/Src/I2CConfig.c:10:13:HAL_I2C_MasterListenCpltCallback	1
+../Core/Src/I2CConfig.c:15:13:HAL_I2C_MasterRxCpltCallback	1

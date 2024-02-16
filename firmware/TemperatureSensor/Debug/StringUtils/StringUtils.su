@@ -1,0 +1,3 @@
+../StringUtils/StringUtils.c:9:8:SplitString	32	static
+../StringUtils/StringUtils.c:37:6:Free2DArray	16	static
+../StringUtils/StringUtils.c:47:6:FormatString	12	static

@@ -1,0 +1,59 @@
+﻿@page "/login"
+@using QualityStation.Shared.Pages.ViewModels
+@using static QualityStation.Shared.Pages.ViewModels.LoginResult
+
+@inject LoginPageViewModel m_vmLoginPageViewModel
+@inject NavigationManager m_manNavigation
+@inject IBlazorStrap m_oBlazorStrap;
+
+<PageTitle>Login</PageTitle>
+
+<BSRow MarginTop="Margins.Medium">
+	<BSCol ColumnMedium="8" 
+			OffsetMedium="2"
+			ColumnLarge="6"
+			OffsetLarge="3"
+			ColumnSmall="12">
+		<BSRow MarginBottom="Margins.Medium">
+			<BSLabel IsColumn="true">Username</BSLabel>
+			<BSCol ColumnSmall="10">
+				<BSInput InputType="InputType.Text"
+						 @bind-Value="@m_vmLoginPageViewModel.Username" />
+			</BSCol>
+		</BSRow>
+		<BSRow MarginBottom="Margins.Medium">
+			<BSLabel IsColumn="true">Password</BSLabel>
+			<BSCol ColumnSmall="10">
+				<BSInput InputType="InputType.Password" 
+						@bind-Value="@m_vmLoginPageViewModel.Password" />
+			</BSCol>
+		</BSRow>
+		<BSRow>
+			<BSButton Color="BSColor.Primary" 
+					OnClick="OnClicked_Login"
+					Margin="Margins.Auto">
+				Login
+			</BSButton>
+		</BSRow>
+	</BSCol>
+</BSRow>
+
+
+@code {
+	public async void OnClicked_Login()
+	{
+		var sResult = await m_vmLoginPageViewModel.Login();
+
+		if (sResult.Token != null)
+		{
+			m_oBlazorStrap.Toaster.Add("Login Success", options =>
+			{
+				options.Color = BSColor.Success;
+				options.CloseAfter = 1000;
+				options.HasIcon = true;
+				options.Toast = Toast.TopRight;
+			});
+			m_manNavigation.NavigateTo("/", true);
+		}
+	}
+}

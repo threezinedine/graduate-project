@@ -1,0 +1,8 @@
+../LinkList/LinkList.c:8:11:LinkList_Init	16	static
+../LinkList/LinkList.c:19:6:LinkList_Release	24	static
+../LinkList/LinkList.c:34:9:LinkList_GetSize	16	static
+../LinkList/LinkList.c:39:6:LinkList_Append	24	static
+../LinkList/LinkList.c:59:7:LinkList_Get	24	static
+../LinkList/LinkList.c:79:6:LinkList_SetFreeElement	16	static
+../LinkList/LinkList.c:84:6:LinkList_Delete	24	static
+../LinkList/LinkList.c:117:6:EmptyFreeElement	16	static

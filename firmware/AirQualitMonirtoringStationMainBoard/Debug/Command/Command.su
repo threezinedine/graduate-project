@@ -1,0 +1,13 @@
+../Command/Command.c:31:6:Command_Init	8	static
+../Command/Command.c:40:6:Command_Release	8	static
+../Command/Command.c:46:6:Command_Register	32	static
+../Command/Command.c:54:6:Command_ReceiveData	24	static
+../Command/Command.c:63:6:Command_RegisterDefaultCallback	16	static
+../Command/Command.c:68:6:EmptyCommandHanlder	16	static
+../Command/Command.c:72:6:Command_Update	24	static
+../Command/Command.c:95:6:FreeCommand	16	static
+../Command/Command.c:102:6:Command_Response	16	static
+../Command/Command.c:109:6:Command_ResponseConstChar	16	static
+../Command/Command.c:114:6:HelpCommandHanlderFunction	56	static
+../Command/Command.c:128:13:FreeCommandDefElement	16	static
+../Command/Command.c:133:13:FreeCommandQueueElement	16	static

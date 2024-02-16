@@ -1,0 +1,7 @@
+../Core/Src/MainProcess.c:38:6:MainProcess	4
+../Core/Src/MainProcess.c:52:6:RunningSection	5
+../Core/Src/MainProcess.c:84:6:InitializeSuccess	1
+../Core/Src/MainProcess.c:90:6:GoToConfig	1
+../Core/Src/MainProcess.c:95:6:GoToRun	1
+../Core/Src/MainProcess.c:100:6:GetCurrentState	5
+../Core/Src/MainProcess.c:118:6:GetDataCallback	5

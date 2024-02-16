@@ -1,0 +1,90 @@
+﻿@page "/single-station/{strStationId}/{strAttributeName}"
+@using QualityStation.Shared.Pages.ViewModels
+
+@inject SingleStationChartViewModel m_vmSingleStationChartViewModel
+
+<PageTitle>@strAttributeName</PageTitle>
+
+@if(m_IsFloat)
+{
+	<div style="background-color: #aaa;">
+		<RadzenChart>
+				<RadzenLineSeries Smooth="@true"
+								  Data="@m_DataFloat"
+								  CategoryProperty="Date" Title="@strAttributeName" 
+						ValueProperty="Value">
+				<RadzenSeriesDataLabels Visible=@false/>
+			</RadzenLineSeries>
+			<RadzenCategoryAxis Padding="20" Formatter="FormatAsTime"/>
+				<RadzenGridLines Visible="true" />
+				<RadzenAxisTitle Text="Time" />
+			<RadzenValueAxis>
+				<RadzenGridLines Visible="true" />
+				<RadzenAxisTitle Text="@strAttributeName" />
+			</RadzenValueAxis>
+		</RadzenChart>
+	</div>
+}
+else
+{
+	<div style="background-color: #aaa;">
+		<RadzenChart>
+			<RadzenLineSeries Smooth="@true"
+							  Data="@m_Data"
+							  CategoryProperty="Date" Title="@strAttributeName"
+							  ValueProperty="Value">
+				<RadzenSeriesDataLabels Visible=@false />
+			</RadzenLineSeries>
+			<RadzenCategoryAxis Padding="20" Formatter="FormatAsTime" />
+			<RadzenGridLines Visible="true" />
+			<RadzenAxisTitle Text="Time" />
+			<RadzenValueAxis>
+				<RadzenGridLines Visible="true" />
+				<RadzenAxisTitle Text="@strAttributeName" />
+			</RadzenValueAxis>
+		</RadzenChart>
+	</div>
+}
+
+@code {
+	[Parameter]
+	public string strStationId { get; set; } = string.Empty;
+	[Parameter]
+	public string strAttributeName { get; set; } = string.Empty;
+
+	private SingleStationChartViewModel.DataItem<int>[] m_Data 
+		= new SingleStationChartViewModel.DataItem<int>[] { };
+
+	private SingleStationChartViewModel.DataItem<double>[] m_DataFloat
+		= new SingleStationChartViewModel.DataItem<double>[] { };
+
+	private bool m_IsFloat = false;
+
+	protected override async Task OnInitializedAsync()
+	{
+		await m_vmSingleStationChartViewModel.LoadRecordsById(strStationId);
+
+
+		try
+		{
+			m_DataFloat = m_vmSingleStationChartViewModel.GetDataFloat(strAttributeName).ToArray();
+			Console.WriteLine("here");
+			Console.WriteLine(m_DataFloat);
+			m_IsFloat = true;
+		}
+		catch
+		{
+			m_Data = m_vmSingleStationChartViewModel.GetDataInteger(strAttributeName).ToArray();
+		}
+	}
+
+	string FormatAsTime(object value)
+	{
+		if (value != null)
+		{
+			return Convert.ToDateTime(value).ToString("%m:%s");
+        }
+
+        return string.Empty;
+    }
+}

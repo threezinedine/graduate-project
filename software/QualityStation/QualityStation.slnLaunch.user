@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Name": "QualityStation.API\\QualityStation.API.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Name": "QualityStation.WebClient\\QualityStation.WebClient.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

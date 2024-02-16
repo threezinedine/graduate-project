@@ -1,0 +1,51 @@
+﻿@page "/"
+
+@using NTTUsbCLI.App.ViewModels
+@using Microsoft.Maui.Controls
+
+@inject IJSRuntime JSRuntime
+@inject CliPageViewModel vmCliPageViewModel
+
+<PageTitle>CLI Page</PageTitle>
+
+<div class="code-area">
+	@foreach (string message in vmCliPageViewModel.Messages)
+	{
+		<div class="code-line">
+			<span class="code-prompt">@message</span>
+		</div>
+	}
+	<div class="code-line">
+		<span class="code-prompt">>></span>
+		<input class="code-input"
+				id="command-input"
+				@onkeydown="OnKeyDown"
+				@bind="vmCliPageViewModel.Command"
+				type="text" />
+	</div>
+</div>
+
+@code {
+	protected override async Task OnAfterRenderAsync(bool firstRender)
+	{
+		await JSRuntime.InvokeVoidAsync("CodeInputFunctions.SetElement", "command-input");
+		await JSRuntime.InvokeVoidAsync("CodeInputFunctions.Focus");
+	}
+
+	private void OnKeyDown(KeyboardEventArgs e)
+	{
+		if (e.Key == "ArrowUp")
+		{
+			vmCliPageViewModel.PrevCommand();
+		}
+		else if(e.Key == "ArrowDown") 
+		{
+			vmCliPageViewModel.NextCommand();
+		}
+		else if (e.CtrlKey && e.Key == "c")
+		{
+			Console.Write("Press Control C");
+			vmCliPageViewModel.ClearCommand();
+		}
+	}
+}

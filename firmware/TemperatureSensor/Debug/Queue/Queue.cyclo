@@ -1,0 +1,7 @@
+../Queue/Queue.c:80:6:EmptyFreeNodeFunction	1
+../Queue/Queue.c:6:8:Queue_Init	1
+../Queue/Queue.c:16:6:Queue_SetFreeElement	1
+../Queue/Queue.c:21:6:Queue_Release	2
+../Queue/Queue.c:36:9:Queue_IsEmpty	1
+../Queue/Queue.c:41:6:Queue_EnQueue	2
+../Queue/Queue.c:60:7:Queue_DeQueue	2

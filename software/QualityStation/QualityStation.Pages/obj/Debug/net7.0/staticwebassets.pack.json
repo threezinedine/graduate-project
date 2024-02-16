@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Acer\\Project\\Air-quality-monitoring-station\\software\\QualityStation\\QualityStation.Pages\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\QualityStation.Shared.Pages.bundle.scp.css",
+      "PackagePath": "staticwebassets\\QualityStation.Shared.Pages.bundle.scp.css"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.QualityStation.Shared.Pages.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.QualityStation.Shared.Pages.props",
+      "PackagePath": "build\\QualityStation.Shared.Pages.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.QualityStation.Shared.Pages.props",
+      "PackagePath": "buildMultiTargeting\\QualityStation.Shared.Pages.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.QualityStation.Shared.Pages.props",
+      "PackagePath": "buildTransitive\\QualityStation.Shared.Pages.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

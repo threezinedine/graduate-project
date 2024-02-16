@@ -1,0 +1,5 @@
+#include "main.h"
+
+void LoRa_Init(UART_HandleTypeDef* huart);
+void LoRa_Release(void);
+

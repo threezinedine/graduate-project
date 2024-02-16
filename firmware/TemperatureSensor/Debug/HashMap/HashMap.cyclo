@@ -1,0 +1,7 @@
+../HashMap/HashMap.c:8:13:DefaultFreeElementCallback	1
+../HashMap/HashMap.c:12:10:HashMap_Init	1
+../HashMap/HashMap.c:21:6:HashMap_Set	4
+../HashMap/HashMap.c:52:7:HashMap_Get	3
+../HashMap/HashMap.c:71:6:HashMap_Release	2
+../HashMap/HashMap.c:86:9:HashMap_Contains	3
+../HashMap/HashMap.c:103:6:HashMap_SetFreeElementCallback	1

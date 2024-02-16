@@ -1,0 +1,44 @@
+﻿@page "/stations"
+@using Microsoft.AspNetCore.Authorization
+@using QualityStation.Shared.Pages.ViewModels
+
+@attribute [Authorize]
+@inject StationPageViewModel m_vmStationPageViewModel
+
+<PageTitle>Stations</PageTitle>
+
+<BSContainer>
+	<BSRow MarginTop="Margins.ExtraLarge">
+		<BSCol ColumnMedium="8" ColumnLarge="10" ColumnSmall="12">
+			<BSInput InputType="InputType.Text" 
+						placeholder="Enter station name" Value="@("")" />
+		</BSCol>
+		<BSCol ColumnMedium="4" ColumnLarge="2" ColumnSmall="12">
+			<BSButton Color="BSColor.Success">New</BSButton>
+		</BSCol>
+	</BSRow>
+	<BSRow MarginTop="Margins.Large">
+		<BSCol Column="12">
+			@foreach (var station in m_vmStationPageViewModel.Stations)
+			{
+				<BSRow>
+					<BSCard CardType="CardType.Card">
+						<BSCard CardType="CardType.Body">
+							<BSCard CardType="CardType.Title">@station.StationName</BSCard>
+							<BSCard CardType="CardType.Body">Position: @station.StationPosition</BSCard>
+							<BSLink Url="@($"/single-station/{station.Id}")" Color="BSColor.Primary">More</BSLink>
+						</BSCard>	
+					</BSCard>
+				</BSRow>
+			}
+		</BSCol>
+	</BSRow>
+</BSContainer>
+
+
+@code {
+	protected override async Task OnInitializedAsync()
+	{
+		await m_vmStationPageViewModel.LoadAllStations();
+	}
+}

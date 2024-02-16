@@ -1,0 +1,178 @@
+﻿@using QualityStation.Shared.ModelDto.RecordAttributeDto
+@using QualityStation.Shared.Pages.ViewModels
+@inject AttributeComponentViewModel m_vmAttributeComponentViewModel
+@inject IBlazorStrap m_blazorStrap
+
+
+<BSContainer>
+	<BSContainer>
+		<BSRow>
+			<BSCol Align="Align.Start">
+				<BSLabel>
+					@AttributeName
+				</BSLabel>
+			</BSCol>
+			<BSCol Align="Align.End">
+				<BSButtonGroup>
+					<BSButton IsDisabled="@(PrevAttributeName == null)" 
+							OnClick="MoveAttributeUp"
+							Color="BSColor.Light">
+						Up
+					</BSButton>
+					<BSButton Target="@($"attribute-{StationId}-{AttributeName}")">
+						More
+					</BSButton>
+					<BSButton IsDisabled="@(NextAttributeName == null)" 
+							OnClick="MoveAttributeDown"
+							Color="BSColor.Light">
+						Down
+					</BSButton>
+				</BSButtonGroup>
+			</BSCol>
+		</BSRow>
+	</BSContainer>
+	<BSCollapse DataId="@($"attribute-{StationId}-{AttributeName}")">
+		<BSContainer>
+			<BSRow MarginTop="Margins.Medium">
+				<BSCol Column="12">
+					<BSRow MarginBottom="Margins.Medium">
+						<BSLabel IsColumn="true">Name</BSLabel>
+						<BSCol ColumnSmall="10">
+							<BSInput InputType="InputType.Text"
+									 @bind-Value="@m_vmAttributeComponentViewModel.AttributeName" />
+						</BSCol>
+					</BSRow>
+					<BSRow MarginBottom="Margins.Medium">
+						<BSLabel IsColumn="true">Type</BSLabel>
+						<BSCol ColumnSmall="10">
+							<BSInput InputType="InputType.Select"
+									 @bind-Value="@m_vmAttributeComponentViewModel.DataType">
+								<option value="@(RecordDataType.Float32)">Float32</option>
+								<option value="@(RecordDataType.UInt16)">UInt16</option>
+								<option value="@(RecordDataType.UInt32)">UInt32</option>
+								<option value="@(RecordDataType.Int16)">Int16</option>
+								<option value="@(RecordDataType.Int32)">Int32</option>
+								<option value="@(RecordDataType.Byte)">Byte</option>
+							</BSInput>
+						</BSCol>
+					</BSRow>
+					<BSButtonGroup>
+						<BSButton Color="BSColor.Secondary" OnClick="ReloadAttribute">Cancel</BSButton>
+						<BSButton Color="BSColor.Primary" OnClick="UpdateAttribute">Update</BSButton>
+					</BSButtonGroup>
+				</BSCol>
+			</BSRow>
+		</BSContainer>
+	</BSCollapse>
+</BSContainer>
+
+@code {
+	[Parameter]
+	public string StationId { get; set; } = string.Empty;
+	[Parameter]
+	public string AttributeName { get; set; } = string.Empty;
+	[Parameter]
+	public Func<Task>? UpdateAttributeSuccessCallback { get; set; }
+	[Parameter]
+	public string? NextAttributeName { get; set;  }
+	[Parameter]
+	public string? PrevAttributeName { get; set;  }
+
+	protected override async Task OnInitializedAsync()
+	{
+		await m_vmAttributeComponentViewModel.LoadAttribute(StationId, AttributeName);
+	}
+
+	protected override async Task OnParametersSetAsync()
+	{
+		await ReloadAttribute();
+	}
+
+	private async Task ReloadAttribute()
+	{
+		await m_vmAttributeComponentViewModel.LoadAttribute(StationId, AttributeName);
+		StateHasChanged();
+	}
+
+	private async void UpdateAttribute()
+	{
+		var strErrorMessage = await m_vmAttributeComponentViewModel.UpdateAttribute();
+
+		if (strErrorMessage == null)
+		{
+			await HandleSucces();
+		}
+		else
+		{
+			await HandleFail(strErrorMessage);
+			await ReloadAttribute();
+		}
+	}
+
+	private async Task HandleSucces()
+	{
+		if (UpdateAttributeSuccessCallback != null)
+		{
+			await UpdateAttributeSuccessCallback.Invoke();
+		}
+
+		m_blazorStrap.Toaster.Add("Update Success", "Update Attribute successfully", options =>
+		{
+			options.CloseAfter = 1000;
+			options.Color = BSColor.Success;
+			options.HasIcon = true;
+			options.Toast = Toast.TopRight;
+		});
+	}
+
+	private Task HandleFail(string strErrorMessage)
+	{
+		m_blazorStrap.Toaster.Add("Update Error", strErrorMessage, options =>
+		{
+			options.Color = BSColor.Danger;
+			options.CloseAfter = 1000;
+			options.HasIcon = true;
+			options.Toast = Toast.TopRight;
+		});
+		return Task.CompletedTask;
+	}
+
+	private async void MoveAttributeUp()
+	{
+		if (PrevAttributeName != null)
+		{
+			var strErrorMessage = await m_vmAttributeComponentViewModel			
+							.SwapAttribute(StationId, PrevAttributeName);	
+
+			if (strErrorMessage == null)
+			{
+				await HandleSucces();
+			}
+			else
+			{
+				await HandleFail(strErrorMessage);
+				await ReloadAttribute();
+			}
+
+		}
+	}
+
+	private async void MoveAttributeDown()
+	{
+		if (NextAttributeName != null)
+		{
+			var strErrorMessage = await m_vmAttributeComponentViewModel
+							.SwapAttribute(StationId, NextAttributeName);	
+
+			if (strErrorMessage == null)
+			{
+				await HandleSucces();
+			}
+			else
+			{
+				await HandleFail(strErrorMessage);
+				await ReloadAttribute();
+			}
+		}
+	}
+}

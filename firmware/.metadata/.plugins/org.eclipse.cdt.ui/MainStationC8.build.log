@@ -1,0 +1,21 @@
+01:27:44 **** Incremental Build of configuration Debug for project MainStationC8 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/Handlers.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -I../USB_DEVICE/App -I../USB_DEVICE/Target -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/MainStationC8/LCD/Inc" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/MainStationC8/NTBusMaster/Inc" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/MainStationC8/Queue/Inc" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/MainStationC8/UARTFrame/Inc" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/MainStationC8/CommandManagement/Inc" -I"C:/Users/Acer/Project/Air-quality-monitoring-station/firmware/MainStationC8/Utils/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Handlers.d" -MT"Core/Src/Handlers.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Handlers.o"
+../Core/Src/Handlers.c: In function 'HelpCommandHandler':
+../Core/Src/Handlers.c:55:33: warning: implicit declaration of function 'CDC_Transmit_FS' [-Wimplicit-function-declaration]
+   55 |                                 CDC_Transmit_FS(chHelp, size);
+      |                                 ^~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "MainStationC8.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Acer\Project\Air-quality-monitoring-station\firmware\MainStationC8\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MainStationC8.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MainStationC8.elf
+ 
+arm-none-eabi-size   MainStationC8.elf 
+arm-none-eabi-objdump -h -S  MainStationC8.elf  > "MainStationC8.list"
+   text	   data	    bss	    dec	    hex	filename
+  45172	    632	   6728	  52532	   cd34	MainStationC8.elf
+Finished building: default.size.stdout
+ 
+Finished building: MainStationC8.list
+ 
+
+01:27:45 Build Finished. 0 errors, 1 warnings. (took 1s.17ms)
+

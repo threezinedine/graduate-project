@@ -1,0 +1,1 @@
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.App\QualityStation.App.csproj;x64

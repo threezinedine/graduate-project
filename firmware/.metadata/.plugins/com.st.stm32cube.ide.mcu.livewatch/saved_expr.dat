@@ -1,0 +1,4 @@
+HAL_GPIO_ReadPin(firstBitPort, firstBitPin)
+HAL_GPIO_ReadPin(secondBitPort, secondBitPin)
+HAL_GPIO_ReadPin(firstBitPort, thirdBitPin)
+hi2c1.Init

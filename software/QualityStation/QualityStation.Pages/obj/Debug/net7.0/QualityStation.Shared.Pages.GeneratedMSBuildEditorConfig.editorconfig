@@ -1,0 +1,71 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows,browser
+build_property.RootNamespace = QualityStation.Shared.Pages
+build_property.RootNamespace = QualityStation.Shared.Pages
+build_property.ProjectDir = C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Pages\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Acer\Project\Air-quality-monitoring-station\software\QualityStation\QualityStation.Pages
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/Components/AttributeComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdHRyaWJ1dGVDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/Pages/AboutUs.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXRVcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/Pages/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/Pages/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/Pages/RecordTesting.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjb3JkVGVzdGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/Pages/SingleStation.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2luZ2xlU3RhdGlvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/Pages/SingleStationChart.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2luZ2xlU3RhdGlvbkNoYXJ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/Pages/Stations.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdGlvbnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-paz0h71qmi
+
+[C:/Users/Acer/Project/Air-quality-monitoring-station/software/QualityStation/QualityStation.Pages/Shared/Navbar.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdmJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-1cso9u8twg

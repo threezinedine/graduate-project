@@ -1,0 +1,3 @@
+../LoRa/Src/LoRa.c:6:6:LoRa_Init	24	static
+../LoRa/Src/LoRa.c:15:6:LoRa_Release	4	static
+../LoRa/Src/LoRa.c:20:6:LoRa_Send	16	static

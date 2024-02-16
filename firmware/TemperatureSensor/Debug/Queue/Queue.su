@@ -1,0 +1,7 @@
+../Queue/Queue.c:80:6:EmptyFreeNodeFunction	0	static
+../Queue/Queue.c:6:8:Queue_Init	8	static
+../Queue/Queue.c:16:6:Queue_SetFreeElement	0	static
+../Queue/Queue.c:21:6:Queue_Release	16	static
+../Queue/Queue.c:36:9:Queue_IsEmpty	0	static
+../Queue/Queue.c:41:6:Queue_EnQueue	16	static
+../Queue/Queue.c:60:7:Queue_DeQueue	8	static

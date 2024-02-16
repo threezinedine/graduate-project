@@ -1,0 +1,67 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+
+@inject AuthenticationStateProvider m_authenticationStateProvider
+
+
+<BSNavbar Color="BSColor.Dark" IsDark="true">
+    <BSContainer Container="Container.Fluid">
+        <BSCollapse IsInNavbar="true">
+            <Toggler>
+                <BSNavbarToggle />
+            </Toggler>
+            <Content>
+                <BSNav MarginEnd="Margins.Auto" 
+                        MarginBottom="Margins.Small" 
+                        Class="mb-lg-0">
+                    <BSNavItem Url="/">Home</BSNavItem>
+                    <BSNavItem Url="/about">About Us</BSNavItem>
+                </BSNav>
+
+            </Content>
+        </BSCollapse>
+			<BSNav Justify="Justify.End"
+					MarginStart="Margins.Auto"
+					MarginBottom="Margins.Small" 
+					Class="mb-lg-0">
+				<AuthorizeView>
+					<NotAuthorized>
+						<BSNavItem Url="/login">Login</BSNavItem>
+					</NotAuthorized>
+					<Authorized>
+                        <BSNavItem IsDropdown="true">
+                            <BSDropdown>
+                                <Toggler>
+                                    <BSToggle IsNavLink="true">@context.User?.Identity?.Name</BSToggle>
+                                </Toggler>
+                                <Content>
+                                    <BSDropdownItem Url="/profile">Profile</BSDropdownItem>
+                                    <BSDropdownItem Url="/stations">Stations</BSDropdownItem>
+                                    @if (m_strRole == "Admin")
+                                    {
+										<BSDropdownItem Url="/record-test">Record Testing</BSDropdownItem>
+									}
+                                    <BSDropdownItem IsDivider="true" />
+                                    <BSDropdownItem Url="/logout">Logout</BSDropdownItem>
+                                </Content>
+                            </BSDropdown>
+                        </BSNavItem>
+					</Authorized>
+                </AuthorizeView>
+			</BSNav>
+    </BSContainer>
+</BSNavbar>
+
+    @code{
+    private string m_strRole = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var userState = await m_authenticationStateProvider.GetAuthenticationStateAsync();
+
+        if (userState != null)
+        {
+            m_strRole = userState.User.FindFirst(ClaimTypes.Role)?.Value!;
+        }
+    }
+}

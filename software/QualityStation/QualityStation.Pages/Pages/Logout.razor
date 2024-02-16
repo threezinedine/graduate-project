@@ -1,0 +1,14 @@
+﻿@page "/logout"
+@using QualityStation.Shared.Pages.Services.StorageService
+
+@inject NavigationManager m_manNavigation
+@inject IStorageService m_serStorgae
+
+
+@code {
+	protected override async Task OnInitializedAsync()
+	{
+		await m_serStorgae.RemoveData<string>("token");
+		m_manNavigation.NavigateTo("/", true);
+	}
+}

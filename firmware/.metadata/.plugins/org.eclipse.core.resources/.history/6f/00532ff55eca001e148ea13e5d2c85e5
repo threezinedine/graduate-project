@@ -1,0 +1,59 @@
+/*
+ * AnalogInputHandlers.c
+ *
+ *  Created on: Feb 13, 2024
+ *      Author: Acer
+ */
+
+
+#include "AnalogInputHandlers.h"
+#include "AnalogInput.h"
+#include "main.h"
+
+extern ADC_HandleTypeDef hadc1;
+extern ADC_HandleTypeDef hadc2;
+
+static void AD1_Select_CH4(void);
+static void AD1_Select_CH4(void);
+static void AD2_Select_CH2(void);
+static void AD2_Select_CH3(void);
+
+float AD1_Handler(AnalogInput_Instance *sIns)
+{
+	return 0.0f;
+}
+
+float AD2_Handler(AnalogInput_Instance *sIns)
+{
+	return 0.0f;
+}
+
+float AD3_Handler(AnalogInput_Instance *sIns)
+{
+	return 0.0f;
+}
+
+float AD4_Handler(AnalogInput_Instance *sIns)
+{
+	return 0.0f;
+}
+
+static void AD1_Select_CH4(void)
+{
+
+}
+
+static void AD1_Select_CH4(void)
+{
+
+}
+
+static void AD2_Select_CH2(void)
+{
+
+}
+
+static void AD2_Select_CH3(void)
+{
+
+}

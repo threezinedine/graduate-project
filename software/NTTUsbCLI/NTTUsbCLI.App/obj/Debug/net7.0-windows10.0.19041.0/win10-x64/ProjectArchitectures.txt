@@ -1,0 +1,1 @@
+C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\NTTUsbCLI.App.csproj;x64

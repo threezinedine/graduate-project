@@ -1,0 +1,9 @@
+../Communication/Communication.c:66:6:EmptyTransmitFunction	0	static
+../Communication/Communication.c:70:6:EmptyHanlderFunction	0	static
+../Communication/Communication.c:80:6:QueueFreeUARTFrameNode	8	static
+../Communication/Communication.c:19:25:Communication_Init	8	static
+../Communication/Communication.c:30:6:Communication_Release	0	static
+../Communication/Communication.c:35:6:Communication_SetTransmitFunction	0	static
+../Communication/Communication.c:40:6:Communication_SetHandlerFunction	0	static
+../Communication/Communication.c:45:6:Communication_ReceiveData	24	static
+../Communication/Communication.c:54:6:Communication_Update	16	static

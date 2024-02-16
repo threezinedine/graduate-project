@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>NTTUsbCLI.App</id>
+    <version>1.0.0</version>
+    <authors>NTTUsbCLI.App</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net7.0-android33.0">
+        <dependency id="Microsoft.AspNetCore.Components.WebView.Maui" version="7.0.101" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Graphics" version="7.0.101" exclude="Build,Analyzers" />
+        <dependency id="System.IO.Ports" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Android.Glide" version="4.13.2.2" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Browser" version="1.4.0.3" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Legacy.Support.V4" version="1.0.0.15" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Lifecycle.LiveData" version="2.5.1.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Navigation.Common" version="2.5.2.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Navigation.Fragment" version="2.5.2.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Navigation.Runtime" version="2.5.2.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Navigation.UI" version="2.5.2.1" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.AndroidX.Security.SecurityCrypto" version="1.1.0-alpha03" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Google.Android.Material" version="1.7.0" exclude="Build,Analyzers" />
+        <dependency id="Xamarin.Google.Crypto.Tink.Android" version="1.7.0.1" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net7.0-ios16.1">
+        <dependency id="Microsoft.AspNetCore.Components.WebView.Maui" version="7.0.101" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Graphics" version="7.0.101" exclude="Build,Analyzers" />
+        <dependency id="System.IO.Ports" version="8.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net7.0-maccatalyst16.1">
+        <dependency id="Microsoft.AspNetCore.Components.WebView.Maui" version="7.0.101" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Graphics" version="7.0.101" exclude="Build,Analyzers" />
+        <dependency id="System.IO.Ports" version="8.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net7.0-windows10.0.19041">
+        <dependency id="Microsoft.AspNetCore.Components.WebView.Maui" version="7.0.101" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="7.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Graphics" version="7.0.101" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Graphics.Win2D.WinUI.Desktop" version="7.0.101" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.WindowsAppSDK" version="1.2.221209.1" exclude="Build,Analyzers" />
+        <dependency id="System.IO.Ports" version="8.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\bin\Debug\net7.0-android\NTTUsbCLI.App.runtimeconfig.json" target="lib\net7.0-android33.0\NTTUsbCLI.App.runtimeconfig.json" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\bin\Debug\net7.0-android\NTTUsbCLI.App.dll" target="lib\net7.0-android33.0\NTTUsbCLI.App.dll" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\bin\Debug\net7.0-android\NTTUsbCLI.App.xml" target="lib\net7.0-android33.0\NTTUsbCLI.App.xml" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\bin\Debug\net7.0-ios\iossimulator-x64\NTTUsbCLI.App.runtimeconfig.json" target="lib\net7.0-ios16.1\NTTUsbCLI.App.runtimeconfig.json" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\bin\Debug\net7.0-ios\iossimulator-x64\NTTUsbCLI.App.dll" target="lib\net7.0-ios16.1\NTTUsbCLI.App.dll" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\NTTUsbCLI.App.runtimeconfig.json" target="lib\net7.0-maccatalyst16.1\NTTUsbCLI.App.runtimeconfig.json" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\NTTUsbCLI.App.dll" target="lib\net7.0-maccatalyst16.1\NTTUsbCLI.App.dll" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NTTUsbCLI.App.runtimeconfig.json" target="lib\net7.0-windows10.0.19041\NTTUsbCLI.App.runtimeconfig.json" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\NTTUsbCLI.App.dll" target="lib\net7.0-windows10.0.19041\NTTUsbCLI.App.dll" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri" target="lib\net7.0-windows10.0.19041\resources.pri" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\obj\Debug\net7.0-android\scopedcss\bundle\NTTUsbCLI.App.styles.css" target="staticwebassets\NTTUsbCLI.App.styles.css" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\css\app.css" target="staticwebassets\css\app.css" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\css\bootstrap\bootstrap.min.css" target="staticwebassets\css\bootstrap\bootstrap.min.css" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\css\bootstrap\bootstrap.min.css.map" target="staticwebassets\css\bootstrap\bootstrap.min.css.map" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\css\open-iconic\FONT-LICENSE" target="staticwebassets\css\open-iconic\FONT-LICENSE" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\css\open-iconic\ICON-LICENSE" target="staticwebassets\css\open-iconic\ICON-LICENSE" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\css\open-iconic\README.md" target="staticwebassets\css\open-iconic\README.md" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css" target="staticwebassets\css\open-iconic\font\css\open-iconic-bootstrap.min.css" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\css\open-iconic\font\fonts\open-iconic.eot" target="staticwebassets\css\open-iconic\font\fonts\open-iconic.eot" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\css\open-iconic\font\fonts\open-iconic.otf" target="staticwebassets\css\open-iconic\font\fonts\open-iconic.otf" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\css\open-iconic\font\fonts\open-iconic.svg" target="staticwebassets\css\open-iconic\font\fonts\open-iconic.svg" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\css\open-iconic\font\fonts\open-iconic.ttf" target="staticwebassets\css\open-iconic\font\fonts\open-iconic.ttf" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\css\open-iconic\font\fonts\open-iconic.woff" target="staticwebassets\css\open-iconic\font\fonts\open-iconic.woff" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\favicon.ico" target="staticwebassets\favicon.ico" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\wwwroot\index.html" target="staticwebassets\index.html" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\obj\Debug\net7.0-android\staticwebassets\msbuild.NTTUsbCLI.App.Microsoft.AspNetCore.StaticWebAssets.props" target="build\Microsoft.AspNetCore.StaticWebAssets.props" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\obj\Debug\net7.0-android\staticwebassets\msbuild.build.NTTUsbCLI.App.props" target="build\NTTUsbCLI.App.props" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\obj\Debug\net7.0-android\staticwebassets\msbuild.buildMultiTargeting.NTTUsbCLI.App.props" target="buildMultiTargeting\NTTUsbCLI.App.props" />
+    <file src="C:\Users\Acer\Project\Air-quality-monitoring-station\software\NTTUsbCLI\NTTUsbCLI.App\obj\Debug\net7.0-android\staticwebassets\msbuild.buildTransitive.NTTUsbCLI.App.props" target="buildTransitive\NTTUsbCLI.App.props" />
+  </files>
+</package>

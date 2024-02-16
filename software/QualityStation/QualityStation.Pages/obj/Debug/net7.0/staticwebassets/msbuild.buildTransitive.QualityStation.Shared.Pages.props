@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\QualityStation.Shared.Pages.props" />
+</Project>

@@ -1,0 +1,13 @@
+#include "LoRa.h"
+
+static UART_HandleTypeDef m_huart;
+
+
+void LoRa_Init(UART_HandleTypeDef* huart)
+{
+	m_huart = huart;
+}
+
+void LoRa_Release(void);
+
+void LoRa_Send(uint8_t* data);
